@@ -1,4 +1,4 @@
-### _Creating my first goal application_
+### **Creating my first goal application**
 
 ## Stacks
 
