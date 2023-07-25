@@ -62,18 +62,18 @@ export const updateGoal = asyncHandler(async (req, res) => {
     throw new Error('Not a valid Goal ID!');
   }
 
-  // Check if there is required title is valid
-  const title = req.body.title;
-  if (!title) {
-    res.status(400);
-    throw new Error('Please add a text field!');
-  }
-
   //Check if goal id exist
   const goal = await GoalsModel.findById(req.params.goalId);
   if (!goal) {
     res.status(404);
     throw new Error('Goal not found!');
+  }
+
+  // Check if the title input is valid
+  const title = req.body.title;
+  if (!title) {
+    res.status(400);
+    throw new Error('Please add a text field!');
   }
 
   goal.title = title;
