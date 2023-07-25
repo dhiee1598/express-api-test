@@ -1,0 +1,23 @@
+GET http://localhost:5000/api/goals
+
+###
+
+POST http://localhost:5000/api/goals
+Content-Type: application/application/json
+
+{
+    "title": "My second goal!"
+}
+
+###
+
+PATCH http://localhost:5000/api/goals/313sdadd
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+DELETE http://localhost:5000/api/goals/23133da
