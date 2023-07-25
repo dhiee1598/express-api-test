@@ -8,6 +8,14 @@
 - NodeJs
 - Tailwind CSS
 
-### Install All dependencies
+### Install dependencies
 
-    npm start
+    npm install
+
+### Lint
+
+    npm run lint
+
+### Development
+
+    npm run dev
