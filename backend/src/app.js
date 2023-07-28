@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.json({ message: 'Welcome Lapugo' });
 });
 
 app.use('/api/goals', GoalsRouter);
