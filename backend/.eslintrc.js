@@ -1,9 +1,9 @@
 module.exports = {
   env: {
-    node: true,
     es2021: true,
+    node: true,
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   overrides: [
     {
       env: {
@@ -15,11 +15,11 @@ module.exports = {
       },
     },
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {
-    'no-unused-vars': 0,
-  },
+  plugins: ['@typescript-eslint'],
+  rules: {},
 };
