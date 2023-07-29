@@ -1,6 +1,6 @@
 # **Express API**
 
-    This is my first Express API using TypeScript with session management provides a secure and efficient way to handle user authentication and data persistence. By integrating sessions, you can store user-specific information and maintain stateful interactions throughout their journey in your application
+This is my first Express API using TypeScript with session management provides a secure and efficient way to handle user authentication and data persistence. By integrating sessions, you can store user-specific information and maintain stateful interactions throughout their journey in your application
 
 ### API Server utilities:
 
