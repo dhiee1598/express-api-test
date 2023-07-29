@@ -44,9 +44,7 @@ export const registerUser: RequestHandler<unknown, unknown, UserProps, unknown> 
   });
 
   req.session.userId = newUser._id;
-
-  res.status(201);
-  res.json(newUser);
+  res.status(201).json(newUser);
 });
 
 export const login: RequestHandler<unknown, unknown, LoginProps, unknown> = asyncHandler(async (req, res) => {
@@ -80,16 +78,14 @@ export const login: RequestHandler<unknown, unknown, LoginProps, unknown> = asyn
   }
 
   req.session.userId = user._id;
-  res.status(201);
-  res.json(user);
+  res.status(201).json(user);
 });
 
 export const getAuthenticatedUser: RequestHandler = asyncHandler(async (req, res) => {
   // * desc:    Authorization in users
 
   const user = await UsersModel.findById(req.session.userId).select('+email').exec();
-  res.status(200);
-  res.json(user);
+  res.status(200).json(user);
 });
 
 export const logoutUser: RequestHandler = (req, res, next) => {
